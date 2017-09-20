@@ -1,0 +1,98 @@
+<html>
+<body>
+<div id="innerBox">
+<div id="welcomeText">
+   Welcome to Hogwarts!
+</div>
+</div>
+<div id="innerSorting">
+<img id="sortingHat" src="https://vignette.wikia.nocookie.net/harrypotter/images/6/62/Sorting_Hat.png/revision/latest?cb=20161120072849" height="100px">
+
+<button id="sortButton" onclick="sortHouse()">
+Click to be sorted
+</button>
+</div>
+
+<script>
+function sortHouse(){
+var num=Math.floor((Math.random() * 4) + 1);
+document.body.style.backgroundImage="url('https://i.amz.mshcdn.com/lUSNMAe2ZVVO7A9Wwbogbmvq9Xg=/950x534/filters:quality(90)/2016%2F01%2F12%2Ffe%2FGreat_hall.403bb.jpg')";
+document.getElementById("sortingHat").style.paddingLeft="40%";
+document.getElementById("sortButton").innerHTML="Try again";
+document.getElementById("sortButton").style.marginLeft="41.5%";
+if(num==1){
+document.getElementById("welcomeText").innerHTML="Griffindor";
+document.getElementById("innerSorting").style.backgroundColor="#800000";
+document.getElementById("innerSorting").style.opacity=".5";
+document.getElementById("welcomeText").style.color="#800000";
+document.getElementById("innerBox").style.border="5px solid #800000";
+document.getElementById("sortingHat").src="https://vignette.wikia.nocookie.net/harrypotter/images/8/8e/0.31_Gryffindor_Crest_Transparent.png/revision/latest?cb=20161124074004";
+}
+else if(num==2){
+document.getElementById("welcomeText").innerHTML="Slytherin";
+document.getElementById("innerSorting").style.backgroundColor="#228B22";
+document.getElementById("innerSorting").style.opacity=".5";
+document.getElementById("welcomeText").style.color="#228B22";
+document.getElementById("innerBox").style.border="5px solid #228B22";
+document.getElementById("sortingHat").src="https://vignette.wikia.nocookie.net/harrypotter/images/d/d3/0.61_Slytherin_Crest_Transparent.png/revision/latest?cb=20161020182557";
+}
+else if(num==3){
+document.getElementById("welcomeText").innerHTML="Hufflepuff";
+document.getElementById("innerSorting").style.backgroundColor="#CCCC00";
+document.getElementById("innerSorting").style.opacity=".5";
+document.getElementById("welcomeText").style.color="#CCCC00";
+document.getElementById("innerBox").style.border="5px solid #CCCC00";
+document.getElementById("sortingHat").src="https://vignette.wikia.nocookie.net/harrypotter/images/5/50/0.51_Hufflepuff_Crest_Transparent.png/revision/latest?cb=20161020182518";
+}
+else if(num==4){
+document.getElementById("welcomeText").innerHTML="Ravenclaw";
+document.getElementById("innerSorting").style.backgroundColor="blue";
+document.getElementById("innerSorting").style.opacity=".5";
+document.getElementById("welcomeText").style.color="blue";
+document.getElementById("innerBox").style.border="5px solid blue";
+document.getElementById("sortingHat").src="https://vignette.wikia.nocookie.net/harrypotter/images/2/29/0.41_Ravenclaw_Crest_Transparent.png/revision/latest?cb=20161020182442";
+}
+}
+</script>
+
+<style>
+body{
+  background-size:100%;
+  background-image:url("http://cdn.playbuzz.com/cdn/7aa950b4-eaa0-417d-93af-3bd332dc8086/5e549d0d-aad1-4ec1-96c9-31e36f08af8c.jpg");
+}
+
+#innerBox{
+ margin:10%;
+ height:100px;
+  background-color:white;
+  opacity:.5;
+  border: 5px solid black;
+}
+
+#innerSorting{
+  margin:0 30%;
+ height:200px;
+  background-color:grey;
+  opacity:.9;
+  border: 2px solid black;
+}
+
+#welcomeText{
+  padding-top:30px;
+  text-align:center;
+  font-size:250%;
+}
+
+#sortingHat{
+padding-top:5%;
+  padding-left:38%;
+}
+
+#sortButton{
+  margin-top:3%;
+  margin-left:37%;
+}
+</style>
+</body>
+</html>
+
